@@ -1,6 +1,33 @@
 import sys
 from PyQt5.QtWidgets import *
 
+
+class MyTableWidget(QWidget):
+
+    def __init__(self, parent):
+        super(QWidget, self).__init__(parent)
+        self.layout = QVBoxLayout(self)
+
+        # 탭 초기화 화면
+        self.tabs = QTabWidget()
+        self.homeTab = QWidget()
+        self.tabs.resize(300,200)
+
+        # 탭 추가
+        self.tabs.addTab(self.homeTab, "HOME")
+
+        # "HOME" 탭 생성
+        self.homeTab.layout = QVBoxLayout(self)
+        self.pushButton = QPushButton("QT5")
+        self.homeTab.layout.addWidget(self.pushButton)
+        self.homeTab.setLayout(self.homeTab.layout)
+
+        # 위젯에 탭 추가
+        self.layout.addWidget(self.homeTab)
+        self.setLayout(self.layout)
+
+
+
 class Window(QMainWindow):
 
     def __init__(self):
@@ -10,13 +37,16 @@ class Window(QMainWindow):
         self.top = 10
         self.width = 640
         self.height = 400
-
-        self.initUI()
-
-    def initUI(self):
         self.setWindowTitle(self.title)
         self.setGeometry(self.left, self.top, self.width, self.height)
 
+        self.defaultMenuBar()
+
+        self.table_widget = MyTableWidget(self)
+        self.setCentralWidget(self.table_widget)
+
+
+    def defaultMenuBar(self):
         # Top Menu Bar 선언
         mainMenu = self.menuBar()
 
@@ -49,6 +79,7 @@ class Window(QMainWindow):
         staffMenu.addAction("직원매출관리")
 
         storeMenu.addAction("손익계산")
+
 
 
 
