@@ -1,10 +1,11 @@
 import sys
-from PyQt5.QtWidgets import QApplication, QMainWindow, QMenuBar, QMenu, QWidget, QAction, QTabWidget, QVBoxLayout, QPushButton
+from PyQt5.QtWidgets import QApplication, QMainWindow, QMenuBar, QMenu, QWidget, QAction, \
+    QTabWidget, QVBoxLayout, QPushButton, QFrame
 
 class NMWindow(QMainWindow):
     def __init__(self):
         super(NMWindow, self).__init__()
-        self.setGeometry(100, 100, 801, 461)
+        self.setGeometry(100, 100, 1200, 700)
         self.setWindowTitle("RIRI NAIL SALON")
 
         '''
@@ -15,7 +16,11 @@ class NMWindow(QMainWindow):
 
         saleBar = menubar.addMenu("판매관리")
         payMenu = QAction("결제화면", self)
+        payMenu.triggered.connect(self.changeLayout)
         dailyClosingMenu = QAction("일마감현황", self)
+        paylayout = PayLayout()
+        dailyClosingMenu.triggered.connect(self.changeLayout)
+
         salesDetailsMenu = QAction("매출상세", self)
         productReceiptMenu = QAction("제품입고", self)
         productDetailsMenu = QAction("제품상세", self)
@@ -80,9 +85,22 @@ class NMWindow(QMainWindow):
         end QTabWidget
         '''
 
-    def testAction(self):
-        changeButton = QPushButton("changed!!")
-        self.centralWidget(changeButton)
+
+    def changeLayout(self):
+        #changeButton = QPushButton("changed!!")
+        changeButton = PayLayout().mkLayout()
+        self.setCentralWidget(changeButton)
+
+class PayLayout(QWidget):
+    def __init__(self):
+        super(PayLayout, self).__init__()
+
+    def mkLayout(self):
+        self.wg = QWidget()
+        self.btn = QPushButton("다른 클래스",QFrame(self.wg))
+        return self.wg
+
+
 
 
 if __name__ == "__main__":
