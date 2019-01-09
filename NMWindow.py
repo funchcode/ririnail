@@ -7,29 +7,58 @@ class NMWindow(QMainWindow):
         self.setGeometry(100, 100, 801, 461)
         self.setWindowTitle("RIRI NAIL SALON")
 
+        '''
+        Menubar Zone
+        '''
         menubar = self.menuBar()
         menubar.setNativeMenuBar(False)
-        saleMenu = menubar.addMenu("판매관리")
-        saleMenu.addAction("결제화면")
-        saleMenu.addAction("일마감현황")
-        saleMenu.addAction("매출상세")
-        saleMenu.addAction("제품입고")
-        saleMenu.addAction("제품상세")
-        reservationMenu = menubar.addMenu("예약관리")
-        reservationMenu.addAction("예약현황")
-        marketingMenu = menubar.addMenu("마케팅관리")
-        marketingMenu.addAction("문자발송")
-        settingMenu = menubar.addMenu("기초등록")
-        settingMenu.addAction("서비스메뉴등록")
-        customerMenu = menubar.addMenu("고객관리")
-        customerMenu.addAction("고객등록")
-        customerMenu.addAction("고객조회")
-        customerMenu.addAction("고객상세")
-        employeeMenu = menubar.addMenu("직원관리")
-        employeeMenu.addAction("직원매출관리")
-        storeMenu = menubar.addMenu("매장관리")
-        storeMenu.addAction("손익계산")
 
+        saleBar = menubar.addMenu("판매관리")
+        payMenu = QAction("결제화면", self)
+        dailyClosingMenu = QAction("일마감현황", self)
+        salesDetailsMenu = QAction("매출상세", self)
+        productReceiptMenu = QAction("제품입고", self)
+        productDetailsMenu = QAction("제품상세", self)
+        saleBar.addAction(payMenu)
+        saleBar.addAction(dailyClosingMenu)
+        saleBar.addAction(salesDetailsMenu)
+        saleBar.addAction(productReceiptMenu)
+        saleBar.addAction(productDetailsMenu)
+
+        reservationBar = menubar.addMenu("예약관리")
+        reservationMenu = QAction("예약현황", self)
+        reservationBar.addAction(reservationMenu)
+
+        marketingBar = menubar.addMenu("마케팅관리")
+        sendTextMenu = QAction("문자발송", self)
+        marketingBar.addAction(sendTextMenu)
+
+        settingBar = menubar.addMenu("기초등록")
+        serviceMenu = QAction("서비스메뉴등록", self)
+        settingBar.addAction(serviceMenu)
+
+        customerBar = menubar.addMenu("고객관리")
+        customEnrollMenu = QAction("고객등록", self)
+        customInquiryMenu = QAction("고객조회", self)
+        customDetailsMenu = QAction("고객상세", self)
+        customerBar.addAction(customEnrollMenu)
+        customerBar.addAction(customInquiryMenu)
+        customerBar.addAction(customDetailsMenu)
+
+        employeeBar = menubar.addMenu("직원관리")
+        employSalesMenu = QAction("직원매출관리", self)
+        employeeBar.addAction(employSalesMenu)
+
+        storeBar = menubar.addMenu("매장관리")
+        incomeMenu = QAction("손익계산", self)
+        storeBar.addAction(incomeMenu)
+        ''' 
+        end Menubar
+        '''
+
+        '''
+        QTabWidget Zone
+        '''
         tabWidget = QWidget()
         tabWidget.layout = QVBoxLayout(tabWidget)
 
@@ -47,7 +76,13 @@ class NMWindow(QMainWindow):
         tabWidget.setLayout(tabWidget.layout)
 
         self.setCentralWidget(tabWidget)
+        '''
+        end QTabWidget
+        '''
 
+    def testAction(self):
+        changeButton = QPushButton("changed!!")
+        self.centralWidget(changeButton)
 
 
 if __name__ == "__main__":
