@@ -1,6 +1,7 @@
 import sys
-from PyQt5.QtWidgets import QApplication, QMainWindow, QMenuBar, QMenu, QWidget, QAction, \
-    QTabWidget, QVBoxLayout, QPushButton, QFrame
+from PyQt5.QtWidgets import QApplication, QMainWindow, QWidget, QAction, \
+    QTabWidget, QVBoxLayout, QPushButton, QFrame, QLabel, QLineEdit
+from PyQt5.QtCore import QRect
 
 class NMWindow(QMainWindow):
     def __init__(self):
@@ -97,7 +98,49 @@ class PayLayout(QWidget):
 
     def mkLayout(self):
         self.wg = QWidget()
-        self.btn = QPushButton("다른 클래스",QFrame(self.wg))
+
+        ''' 고객 정보 '''
+        self.customFrame = QFrame(self.wg)
+        self.customFrame.setGeometry(QRect(40, 20, 1120, 250))
+        self.customFrame.setStyleSheet("QWidget{background-color:#ffffff};")
+        customNoL = QLabel("고객 번호", self.customFrame)
+        customNoL.setGeometry(20, 20, 60, 15)
+        customNoL.setStyleSheet("QWidget{background-color:%s}"%"red")
+        customNoE = QLineEdit(self.customFrame)
+        customNoE.setGeometry(90, 20, 60, 15)
+
+        customNameL = QLabel("고객 이름", self.customFrame)
+        customNameL.setGeometry(20, 80, 60, 15)
+        customNameE = QLineEdit(self.customFrame)
+        customNameE.setGeometry(90, 80, 60, 15)
+
+        customCellL = QLabel("연락처", self.customFrame)
+        customCellL.setGeometry(20, 140, 60, 15)
+        customCellE = QLineEdit(self.customFrame)
+        customCellE.setGeometry(90, 140, 60, 15)
+
+        customBirthL = QLabel("생년월일", self.customFrame)
+        customBirthL.setGeometry(520, 20, 60, 15)
+        customBirthE = QLineEdit(self.customFrame)
+        customBirthE.setGeometry(590, 20, 60, 15)
+
+        membershipL = QLabel("회원권", self.customFrame)
+        membershipL.setGeometry(520, 80, 60, 15)
+        membershipE = QLineEdit(self.customFrame)
+        membershipE.setGeometry(590, 80, 60, 15)
+
+        remainingAmountL = QLabel("남은 금액", self.customFrame)
+        remainingAmountL.setGeometry(520, 140, 60, 15)
+        remainingAmountE = QLineEdit(self.customFrame)
+        remainingAmountE.setGeometry(590, 140, 60, 15)
+        ''' end 고객 정보 '''
+
+        ''' 결제 상세 정보 '''
+        self.payDetailsFrame = QFrame(self.wg)
+        self.payDetailsFrame.setGeometry(QRect(40, 290, 1120, 300))
+        self.payDetailsFrame.setStyleSheet("QWidget{background-color:#aaaaaaaa};")
+        ''' end 결제 상세 '''
+
         return self.wg
 
 
