@@ -1,6 +1,6 @@
 import sys
 from PyQt5.QtWidgets import QApplication, QMainWindow, QWidget, QAction, \
-    QTabWidget, QVBoxLayout, QPushButton, QFrame, QLabel, QLineEdit
+    QTabWidget, QVBoxLayout, QPushButton, QFrame, QLabel, QLineEdit, QComboBox, QRadioButton
 from PyQt5.QtCore import QRect
 
 class NMWindow(QMainWindow):
@@ -95,19 +95,25 @@ class NMWindow(QMainWindow):
 class PayLayout(QWidget):
     def __init__(self):
         super(PayLayout, self).__init__()
+        pos1x = 20;
+        pos1y = 20;
+        pos1w = 60;
+        pos1h = 60;
+
 
     def mkLayout(self):
         self.wg = QWidget()
 
         ''' 고객 정보 '''
         self.customFrame = QFrame(self.wg)
-        self.customFrame.setGeometry(QRect(40, 20, 1120, 250))
+        self.customFrame.setGeometry(QRect(40, 20, 1120, 180))
         self.customFrame.setStyleSheet("QWidget{background-color:#ffffff};")
         customNoL = QLabel("고객 번호", self.customFrame)
         customNoL.setGeometry(20, 20, 60, 15)
-        customNoL.setStyleSheet("QWidget{background-color:%s}"%"red")
         customNoE = QLineEdit(self.customFrame)
         customNoE.setGeometry(90, 20, 60, 15)
+        customNoB = QPushButton("+", self.customFrame)
+        customNoB.setGeometry(160, 20, 20, 15)
 
         customNameL = QLabel("고객 이름", self.customFrame)
         customNameL.setGeometry(20, 80, 60, 15)
@@ -128,6 +134,8 @@ class PayLayout(QWidget):
         membershipL.setGeometry(520, 80, 60, 15)
         membershipE = QLineEdit(self.customFrame)
         membershipE.setGeometry(590, 80, 60, 15)
+        membershipB = QPushButton("+", self.customFrame)
+        membershipB.setGeometry(660, 80, 20, 15)
 
         remainingAmountL = QLabel("남은 금액", self.customFrame)
         remainingAmountL.setGeometry(520, 140, 60, 15)
@@ -137,12 +145,35 @@ class PayLayout(QWidget):
 
         ''' 결제 상세 정보 '''
         self.payDetailsFrame = QFrame(self.wg)
-        self.payDetailsFrame.setGeometry(QRect(40, 290, 1120, 300))
+        self.payDetailsFrame.setGeometry(QRect(40, 210, 1120, 300))
         self.payDetailsFrame.setStyleSheet("QWidget{background-color:#aaaaaaaa};")
+
+            # 결제 옵션 정보 #
+        payOptionsFrame = QFrame(self.payDetailsFrame)
+        payOptionsFrame.setGeometry(QRect(10,10,1100,100))
+        payOptionsFrame.setFrameShadow(QFrame.Raised)
+        nailKind = QLabel("종류", payOptionsFrame)
+        nailKindCB = QComboBox(payOptionsFrame)
+        nailKindCB.addItems(["시술종류"])
+        nailKindCB.setGeometry(30,30,100,30)
+
+        nailPrice = QLabel("가격", payOptionsFrame)
+        nailPriceE = QLineEdit(payOptionsFrame)
+
+        membershipUseYN = QLabel("회원권 사용", payOptionsFrame)
+        membershipUseY = QRadioButton(payOptionsFrame)
+        membershipUseY.setGeometry(80,80,10,10)
+        membershipUseN = QRadioButton(payOptionsFrame)
+
+        membershipCash = QLabel("회원권 금액", payOptionsFrame)
+
+        discountPrice = QLabel("할인 금액", payOptionsFrame)
+
+        payPrice = QLabel("결제 금액", payOptionsFrame)
+            # end 결제 옵션 #
         ''' end 결제 상세 '''
 
         return self.wg
-
 
 
 
