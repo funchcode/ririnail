@@ -90,8 +90,9 @@ class NMWindow(QMainWindow):
 
     def changeLayout(self):
         #changeButton = QPushButton("changed!!")
-        changeButton = PayLayout().mkLayout()
-        self.setCentralWidget(changeButton)
+        payLayout = PayLayout().mkLayout()
+        self.setCentralWidget(payLayout)
+
 
 class PayLayout(QWidget):
     def __init__(self):
