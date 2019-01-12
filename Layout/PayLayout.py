@@ -1,110 +1,14 @@
+from PyQt5.QtWidgets import *
+from PyQt5.QtCore import *
 import sys
-from PyQt5.QtWidgets import QApplication, QMainWindow, QWidget, QAction, \
-    QTabWidget, QVBoxLayout, QPushButton, QFrame, QLabel, QLineEdit, QComboBox, QRadioButton, \
-    QTableWidget, QHeaderView
-from PyQt5.QtCore import QRect
 
-class NMWindow(QMainWindow):
+class PayLayoutTest(QMainWindow):
     def __init__(self):
-        super(NMWindow, self).__init__()
+        super().__init__()
         self.setGeometry(100, 100, 1200, 700)
-        self.setWindowTitle("RIRI NAIL SALON")
+        self.setWindowTitle("PayLay")
 
-        '''
-        Menubar Zone
-        '''
-        menubar = self.menuBar()
-        menubar.setNativeMenuBar(False)
-
-        saleBar = menubar.addMenu("판매관리")
-        payMenu = QAction("결제화면", self)
-        payMenu.triggered.connect(self.changeLayout)
-        dailyClosingMenu = QAction("일마감현황", self)
-        paylayout = PayLayout()
-        dailyClosingMenu.triggered.connect(self.changeLayout)
-
-        salesDetailsMenu = QAction("매출상세", self)
-        productReceiptMenu = QAction("제품입고", self)
-        productDetailsMenu = QAction("제품상세", self)
-        saleBar.addAction(payMenu)
-        saleBar.addAction(dailyClosingMenu)
-        saleBar.addAction(salesDetailsMenu)
-        saleBar.addAction(productReceiptMenu)
-        saleBar.addAction(productDetailsMenu)
-
-        reservationBar = menubar.addMenu("예약관리")
-        reservationMenu = QAction("예약현황", self)
-        reservationBar.addAction(reservationMenu)
-
-        marketingBar = menubar.addMenu("마케팅관리")
-        sendTextMenu = QAction("문자발송", self)
-        marketingBar.addAction(sendTextMenu)
-
-        settingBar = menubar.addMenu("기초등록")
-        serviceMenu = QAction("서비스메뉴등록", self)
-        settingBar.addAction(serviceMenu)
-
-        customerBar = menubar.addMenu("고객관리")
-        customEnrollMenu = QAction("고객등록", self)
-        customInquiryMenu = QAction("고객조회", self)
-        customDetailsMenu = QAction("고객상세", self)
-        customerBar.addAction(customEnrollMenu)
-        customerBar.addAction(customInquiryMenu)
-        customerBar.addAction(customDetailsMenu)
-
-        employeeBar = menubar.addMenu("직원관리")
-        employSalesMenu = QAction("직원매출관리", self)
-        employeeBar.addAction(employSalesMenu)
-
-        storeBar = menubar.addMenu("매장관리")
-        incomeMenu = QAction("손익계산", self)
-        storeBar.addAction(incomeMenu)
-        ''' 
-        end Menubar
-        '''
-
-        '''
-        QTabWidget Zone
-        '''
-        tabWidget = QWidget()
-        tabWidget.layout = QVBoxLayout(tabWidget)
-
-        tabs = QTabWidget()
-        tab1 = QWidget()
-        tabs.resize(300, 200)
-
-        tabs.addTab(tab1, "HOME")
-        tab1.layout = QVBoxLayout()
-        pushButton = QPushButton("Test Btn")
-        tab1.layout.addWidget(pushButton)
-        tab1.setLayout(tab1.layout)
-
-        tabWidget.layout.addWidget(tabs)
-        tabWidget.setLayout(tabWidget.layout)
-
-        self.setCentralWidget(tabWidget)
-        '''
-        end QTabWidget
-        '''
-
-
-    def changeLayout(self):
-        #changeButton = QPushButton("changed!!")
-        changeButton = PayLayout().mkLayout()
-        self.setCentralWidget(changeButton)
-
-class PayLayout(QWidget):
-    def __init__(self):
-        super(PayLayout, self).__init__()
-        pos1x = 20;
-        pos1y = 20;
-        pos1w = 60;
-        pos1h = 60;
-
-
-    def mkLayout(self):
         self.wg = QWidget()
-
         ''' 고객 정보 '''
         self.customFrame = QFrame(self.wg)
         self.customFrame.setGeometry(QRect(40, 20, 1120, 180))
@@ -237,12 +141,11 @@ class PayLayout(QWidget):
         tCostPriceE.setGeometry(720, 360, 100, 20)
         ''' end 결제 합산 '''
 
-        return self.wg
-
+        self.setCentralWidget(self.wg)
 
 
 if __name__ == "__main__":
     app = QApplication(sys.argv)
-    exe = NMWindow()
+    exe = PayLayoutTest()
     exe.show()
     sys.exit(app.exec_())
