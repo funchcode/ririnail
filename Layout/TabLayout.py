@@ -38,8 +38,10 @@ class TabLayout(QMainWindow):
         tabWidget.layout = QVBoxLayout(tabWidget)
 
         self.tabs = QTabWidget()
+        self.tabs.setStyleSheet("QTabWidget::tab-bar{alignment:left}")
         tab1 = QWidget()
         self.tabs.resize(300, 200)
+        self.tabs.setContentsMargins(9,9,9,9)
 
         self.tabs.addTab(tab1, "HOME")
         tab1.layout = QVBoxLayout()
@@ -60,7 +62,9 @@ class TabLayout(QMainWindow):
         tab2.layout = QVBoxLayout()
         QLineEdit(tab2)
         tab2.setLayout(tab2.layout)
+        self.tabs
         self.tabs.addTab(tab2, "TEST")
+        self.tabs.setCurrentIndex(1)
 
 
 
