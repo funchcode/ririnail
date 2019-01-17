@@ -5,6 +5,7 @@ from PyQt5.QtCore import *
 
 class TabLayout(QMainWindow):
     def __init__(self):
+        self.tabWidgets = {}
         super(TabLayout, self).__init__()
         self.setGeometry(100, 100, 1200, 700)
         self.setWindowTitle("RIRI NAIL SALON")
@@ -62,11 +63,8 @@ class TabLayout(QMainWindow):
         tab2.layout = QVBoxLayout()
         QLineEdit(tab2)
         tab2.setLayout(tab2.layout)
-        self.tabs
         self.tabs.addTab(tab2, "TEST")
         self.tabs.setCurrentIndex(1)
-
-
 
 
 
