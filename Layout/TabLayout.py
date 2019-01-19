@@ -1,7 +1,7 @@
 import sys
 from PyQt5.QtWidgets import *
 from PyQt5.QtCore import *
-import Layout.PayLayout
+from Layout.PayLayout import *
 
 
 class TabLayout(QMainWindow):
@@ -19,7 +19,7 @@ class TabLayout(QMainWindow):
 
         saleBar = menubar.addMenu("판매관리")
         payMenu = QAction("결제화면", self)
-        payMenu.triggered.connect(lambda: self.addTabs(payMenu.text()))    # lambda로 self와 파라미터를 보낼 수 있다.
+        payMenu.triggered.connect(lambda: self.tabManager(payMenu.text())) # lambda로 self와 파라미터를 보낼 수 있다.
         dailyClosingMenu = QAction("일마감현황", self)
         salesDetailsMenu = QAction("매출상세", self)
         productReceiptMenu = QAction("제품입고", self)
@@ -41,7 +41,7 @@ class TabLayout(QMainWindow):
 
         self.tabs = QTabWidget()
         self.tabs.setTabsClosable(True)
-        print(self.tabs.tabsClosable())                                 # 버전 5부터에서는 Mac에서 확인할 수 없다.
+        print(self.tabs.tabsClosable())  # 버전 5부터에서는 Mac에서 확인할 수 없다.
         # self.tabs.tabBar().setStyleSheet("QTabBar::close-button{background-image:url(\"../image/xicon.png\")}") # Mac에서 확인할 수 없어서 커스텀마이징
         self.tabs.setStyleSheet("QTabWidget::tab-bar{alignment:left}")
         tab1 = QWidget()
@@ -63,17 +63,18 @@ class TabLayout(QMainWindow):
         '''
 
 
-    def addTabs(self, tabName): # 탭이 삭제되었을 때 Index 처리 ({} -> [])
+    def tabManager(self, tabName): # 탭이 삭제되었을 때 Index 처리 ({} -> [])
         if tabName in self.tabWidgets:
             self.tabs.setCurrentIndex(self.tabWidgets.index(tabName))
         else:
-            tab2 = QWidget()
-            tab2.layout = QVBoxLayout()
-            QLineEdit(tab2)
-            tab2.setLayout(tab2.layout)
-            customTab = Layout.PayLayout.PayLayoutTest()
-            #self.tabs.addTab(tab2, tabName)                         #
-            self.tabs.addTab(customTab, tabName)
+            # tab2 = QWidget()
+            # tab2.layout = QVBoxLayout()
+            # QLineEdit(tab2)
+            # tab2.setLayout(tab2.layout)
+            #self.tabs.addTab(tab2, tabName)
+            if tabName == "결제화면":
+                newTab = PayLayoutTest()
+            self.tabs.addTab(newTab, tabName)
             self.tabs.setCurrentIndex(self.tabs.count()-1)          # setCurrentIndex로 보여주는 탭을 변경
             self.tabWidgets.append(tabName)                         # 리스트로 관리
 

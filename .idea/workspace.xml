@@ -1,11 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="BookmarkManager">
-    <bookmark url="file://$PROJECT_DIR$/NMWindow.py" line="76" mnemonic="3" />
+    <bookmark url="file://$PROJECT_DIR$/NMWindow.py" line="78" mnemonic="3" />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c4342e3f-bed6-4173-bc5c-25d9ddfd0476" name="Default" comment="">
+      <change beforePath="" afterPath="$PROJECT_DIR$/tools/DailyCalendar.py" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/Layout/PayLayout.py" afterPath="$PROJECT_DIR$/Layout/PayLayout.py" />
       <change beforePath="$PROJECT_DIR$/Layout/TabLayout.py" afterPath="$PROJECT_DIR$/Layout/TabLayout.py" />
+      <change beforePath="$PROJECT_DIR$/NMWindow.py" afterPath="$PROJECT_DIR$/NMWindow.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -19,8 +23,8 @@
       <file leaf-file-name="TabTest.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/test/TabTest.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="738">
-              <caret line="42" column="0" lean-forward="false" selection-start-line="42" selection-start-column="0" selection-end-line="42" selection-end-column="0" />
+            <state relative-caret-position="54">
+              <caret line="20" column="39" lean-forward="true" selection-start-line="20" selection-start-column="39" selection-end-line="20" selection-end-column="39" />
               <folding>
                 <element signature="e#0#10#0" expanded="true" />
               </folding>
@@ -31,8 +35,8 @@
       <file leaf-file-name="NMWindow.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/NMWindow.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="4320">
-              <caret line="244" column="0" lean-forward="false" selection-start-line="244" selection-start-column="0" selection-end-line="249" selection-end-column="0" />
+            <state relative-caret-position="835">
+              <caret line="104" column="77" lean-forward="false" selection-start-line="104" selection-start-column="77" selection-end-line="104" selection-end-column="77" />
               <folding>
                 <element signature="e#0#10#0" expanded="true" />
               </folding>
@@ -40,11 +44,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="TabLayout.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="TabLayout.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Layout/TabLayout.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="124">
-              <caret line="60" column="22" lean-forward="false" selection-start-line="60" selection-start-column="22" selection-end-line="60" selection-end-column="22" />
+            <state relative-caret-position="551">
+              <caret line="42" column="9" lean-forward="false" selection-start-line="42" selection-start-column="9" selection-end-line="42" selection-end-column="9" />
               <folding>
                 <element signature="e#0#10#0" expanded="true" />
               </folding>
@@ -55,12 +59,43 @@
       <file leaf-file-name="PayLayout.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Layout/PayLayout.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="162">
-              <caret line="11" column="8" lean-forward="false" selection-start-line="11" selection-start-column="8" selection-end-line="141" selection-end-column="25" />
+            <state relative-caret-position="-2072">
+              <caret line="10" column="15" lean-forward="false" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="15" />
               <folding>
                 <element signature="e#0#29#0" expanded="true" />
               </folding>
             </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="HomeLayout.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Layout/HomeLayout.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="270">
+              <caret line="15" column="39" lean-forward="true" selection-start-line="15" selection-start-column="39" selection-end-line="15" selection-end-column="39" />
+              <folding>
+                <element signature="e#0#29#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="DailyCalendar.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/tools/DailyCalendar.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="90">
+              <caret line="5" column="34" lean-forward="false" selection-start-line="5" selection-start-column="34" selection-end-line="5" selection-end-column="34" />
+              <folding>
+                <element signature="e#0#29#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="xicon.png" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/image/xicon.png">
+          <provider selected="true" editor-type-id="images">
+            <state />
           </provider>
         </entry>
       </file>
@@ -85,6 +120,7 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
+      <find>PayLayout</find>
       <find>changeL</find>
     </findStrings>
   </component>
@@ -101,18 +137,20 @@
         <option value="$PROJECT_DIR$/MenusBar.py" />
         <option value="$PROJECT_DIR$/Example.py" />
         <option value="$PROJECT_DIR$/Window.py" />
-        <option value="$PROJECT_DIR$/test/TabTest.py" />
         <option value="$PROJECT_DIR$/PyqtTest.py" />
         <option value="$PROJECT_DIR$/QFrameTest.py" />
-        <option value="$PROJECT_DIR$/Layout/PayLayout.py" />
-        <option value="$PROJECT_DIR$/NMWindow.py" />
+        <option value="$PROJECT_DIR$/test/TabTest.py" />
         <option value="$PROJECT_DIR$/Layout/TabLayout.py" />
+        <option value="$PROJECT_DIR$/NMWindow.py" />
+        <option value="$PROJECT_DIR$/Layout/PayLayout.py" />
+        <option value="$PROJECT_DIR$/Layout/HomeLayout.py" />
+        <option value="$PROJECT_DIR$/tools/DailyCalendar.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
     <option name="y" value="23" />
-    <option name="width" value="1250" />
+    <option name="width" value="720" />
     <option name="height" value="877" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -143,12 +181,22 @@
             <path>
               <item name="nail" type="b2602c69:ProjectViewProjectNode" />
               <item name="nail" type="462c0819:PsiDirectoryNode" />
+              <item name="image" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="nail" type="b2602c69:ProjectViewProjectNode" />
+              <item name="nail" type="462c0819:PsiDirectoryNode" />
               <item name="Layout" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="nail" type="b2602c69:ProjectViewProjectNode" />
               <item name="nail" type="462c0819:PsiDirectoryNode" />
               <item name="test" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="nail" type="b2602c69:ProjectViewProjectNode" />
+              <item name="nail" type="462c0819:PsiDirectoryNode" />
+              <item name="tools" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -159,7 +207,12 @@
   <component name="PropertiesComponent">
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="SearchEverywhereHistoryKey" value="chrome&#9;null&#9;null" />
+    <property name="SearchEverywhereHistoryKey" value="&#9;FILE&#9;file:///Users/dazzle/workspace/toy/nail/test/TabTest.py&#10;chrome&#9;null&#9;null" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/image" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -173,7 +226,25 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.TabLayout">
+  <component name="RunManager" selected="Python.HomeLayout">
+    <configuration name="HomeLayout" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Layout" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="nail" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Layout/HomeLayout.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+    </configuration>
     <configuration name="NMWindow" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -205,24 +276,6 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="nail" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Layout/PayLayout.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-    </configuration>
-    <configuration name="PyqtTest" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="nail" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/PyqtTest.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -265,19 +318,19 @@
       <option name="MODULE_MODE" value="false" />
     </configuration>
     <list size="5">
-      <item index="0" class="java.lang.String" itemvalue="Python.PyqtTest" />
-      <item index="1" class="java.lang.String" itemvalue="Python.NMWindow" />
-      <item index="2" class="java.lang.String" itemvalue="Python.QFrameTest" />
-      <item index="3" class="java.lang.String" itemvalue="Python.PayLayout" />
-      <item index="4" class="java.lang.String" itemvalue="Python.TabLayout" />
+      <item index="0" class="java.lang.String" itemvalue="Python.NMWindow" />
+      <item index="1" class="java.lang.String" itemvalue="Python.QFrameTest" />
+      <item index="2" class="java.lang.String" itemvalue="Python.PayLayout" />
+      <item index="3" class="java.lang.String" itemvalue="Python.TabLayout" />
+      <item index="4" class="java.lang.String" itemvalue="Python.HomeLayout" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Python.TabLayout" />
+        <item index="0" class="java.lang.String" itemvalue="Python.HomeLayout" />
         <item index="1" class="java.lang.String" itemvalue="Python.NMWindow" />
         <item index="2" class="java.lang.String" itemvalue="Python.PayLayout" />
-        <item index="3" class="java.lang.String" itemvalue="Python.QFrameTest" />
-        <item index="4" class="java.lang.String" itemvalue="Python.PyqtTest" />
+        <item index="3" class="java.lang.String" itemvalue="Python.TabLayout" />
+        <item index="4" class="java.lang.String" itemvalue="Python.QFrameTest" />
       </list>
     </recent_temporary>
   </component>
@@ -301,16 +354,17 @@
     <frame x="0" y="23" width="1440" height="877" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1736111" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.1736111" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Inspection Results" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.1515528" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32919255" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25093168" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.21490683" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.30559006" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -337,25 +391,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/test/TabTest.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="468">
-          <caret line="27" column="0" lean-forward="false" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#10#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/QFrameTest.py" />
-    <entry file="file://$PROJECT_DIR$/test/TestApp.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="7" column="21" lean-forward="false" selection-start-line="7" selection-start-column="21" selection-end-line="7" selection-end-column="21" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/PyqtTest.py" />
     <entry file="file://$PROJECT_DIR$/MyApp.py" />
     <entry file="file://$PROJECT_DIR$/Example.py" />
@@ -489,18 +524,35 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/MenuBar.py" />
     <entry file="file://$PROJECT_DIR$/PyqtTest.py" />
-    <entry file="file://$PROJECT_DIR$/NMWindow.py">
+    <entry file="file://$PROJECT_DIR$/MyApp.py" />
+    <entry file="file://$PROJECT_DIR$/Example.py" />
+    <entry file="file://$PROJECT_DIR$/QFrameTest.py" />
+    <entry file="file://$PROJECT_DIR$/Window.py" />
+    <entry file="file://$PROJECT_DIR$/image/xicon.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Layout/TabLayout.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4320">
-          <caret line="244" column="0" lean-forward="false" selection-start-line="244" selection-start-column="0" selection-end-line="249" selection-end-column="0" />
+        <state relative-caret-position="551">
+          <caret line="42" column="9" lean-forward="false" selection-start-line="42" selection-start-column="9" selection-end-line="42" selection-end-column="9" />
           <folding>
             <element signature="e#0#10#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/MyApp.py" />
-    <entry file="file://$PROJECT_DIR$/Example.py" />
+    <entry file="file://$PROJECT_DIR$/test/TabTest.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="54">
+          <caret line="20" column="39" lean-forward="true" selection-start-line="20" selection-start-column="39" selection-end-line="20" selection-end-column="39" />
+          <folding>
+            <element signature="e#0#10#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/test/TestApp.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="126">
@@ -509,34 +561,42 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/QFrameTest.py" />
+    <entry file="file://$PROJECT_DIR$/NMWindow.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="835">
+          <caret line="104" column="77" lean-forward="false" selection-start-line="104" selection-start-column="77" selection-end-line="104" selection-end-column="77" />
+          <folding>
+            <element signature="e#0#10#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Layout/PayLayout.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="162">
-          <caret line="11" column="8" lean-forward="false" selection-start-line="11" selection-start-column="8" selection-end-line="141" selection-end-column="25" />
+        <state relative-caret-position="-2072">
+          <caret line="10" column="15" lean-forward="false" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="15" />
           <folding>
             <element signature="e#0#29#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Window.py" />
-    <entry file="file://$PROJECT_DIR$/test/TabTest.py">
+    <entry file="file://$PROJECT_DIR$/tools/DailyCalendar.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="738">
-          <caret line="42" column="0" lean-forward="false" selection-start-line="42" selection-start-column="0" selection-end-line="42" selection-end-column="0" />
+        <state relative-caret-position="90">
+          <caret line="5" column="34" lean-forward="false" selection-start-line="5" selection-start-column="34" selection-end-line="5" selection-end-column="34" />
           <folding>
-            <element signature="e#0#10#0" expanded="true" />
+            <element signature="e#0#29#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Layout/TabLayout.py">
+    <entry file="file://$PROJECT_DIR$/Layout/HomeLayout.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="124">
-          <caret line="60" column="22" lean-forward="false" selection-start-line="60" selection-start-column="22" selection-end-line="60" selection-end-column="22" />
+        <state relative-caret-position="270">
+          <caret line="15" column="39" lean-forward="true" selection-start-line="15" selection-start-column="39" selection-end-line="15" selection-end-column="39" />
           <folding>
-            <element signature="e#0#10#0" expanded="true" />
+            <element signature="e#0#29#0" expanded="true" />
           </folding>
         </state>
       </provider>
