@@ -39,6 +39,9 @@ class TabLayout(QMainWindow):
         tabWidget.layout = QVBoxLayout(tabWidget)
 
         self.tabs = QTabWidget()
+        self.tabs.setTabsClosable(True)
+        print(self.tabs.tabsClosable())                                 # 버전 5부터에서는 Mac에서 확인할 수 없다.
+        # self.tabs.tabBar().setStyleSheet("QTabBar::close-button{background-image:url(\"../image/xicon.png\")}") # Mac에서 확인할 수 없어서 커스텀마이징
         self.tabs.setStyleSheet("QTabWidget::tab-bar{alignment:left}")
         tab1 = QWidget()
         self.tabs.resize(300, 200)
@@ -69,11 +72,12 @@ class TabLayout(QMainWindow):
             tab2.setLayout(tab2.layout)
             self.tabs.addTab(tab2, tabName)                         #
             self.tabs.setCurrentIndex(self.tabs.count()-1)          # setCurrentIndex로 보여주는 탭을 변경
-            self.tabWidgets.append(tabName)     # 딕셔너리로 현재 탭들 관리
+            self.tabWidgets.append(tabName)                         # 리스트로 관리
 
 
 
 if __name__ == "__main__":
+    QApplication.setStyle('Windows') # ['Windows', 'Fusion', 'Macintosh'] 스타일이 존재함.
     app = QApplication(sys.argv)
     exe = TabLayout()
     exe.show()
