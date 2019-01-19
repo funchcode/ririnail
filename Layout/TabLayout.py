@@ -5,7 +5,7 @@ from PyQt5.QtCore import *
 
 class TabLayout(QMainWindow):
     def __init__(self):
-        self.tabWidgets = {}
+        self.tabWidgets = ["HOME"]
         super(TabLayout, self).__init__()
         self.setGeometry(100, 100, 1200, 700)
         self.setWindowTitle("RIRI NAIL SALON")
@@ -59,9 +59,9 @@ class TabLayout(QMainWindow):
         '''
 
 
-    def addTabs(self, tabName): # 탭이 삭제되었을 때 Index
+    def addTabs(self, tabName): # 탭이 삭제되었을 때 Index 처리 ({} -> [])
         if tabName in self.tabWidgets:
-            self.tabs.setCurrentIndex(self.tabWidgets[tabName])
+            self.tabs.setCurrentIndex(self.tabWidgets.index(tabName))
         else:
             tab2 = QWidget()
             tab2.layout = QVBoxLayout()
@@ -69,7 +69,7 @@ class TabLayout(QMainWindow):
             tab2.setLayout(tab2.layout)
             self.tabs.addTab(tab2, tabName)                         #
             self.tabs.setCurrentIndex(self.tabs.count()-1)          # setCurrentIndex로 보여주는 탭을 변경
-            self.tabWidgets[tabName] = self.tabs.currentIndex()     # 딕셔너리로 현재 탭들 관리
+            self.tabWidgets.append(tabName)     # 딕셔너리로 현재 탭들 관리
 
 
 
