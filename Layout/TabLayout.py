@@ -1,6 +1,7 @@
 import sys
 from PyQt5.QtWidgets import *
 from PyQt5.QtCore import *
+import Layout.PayLayout
 
 
 class TabLayout(QMainWindow):
@@ -70,7 +71,9 @@ class TabLayout(QMainWindow):
             tab2.layout = QVBoxLayout()
             QLineEdit(tab2)
             tab2.setLayout(tab2.layout)
-            self.tabs.addTab(tab2, tabName)                         #
+            customTab = Layout.PayLayout.PayLayoutTest()
+            #self.tabs.addTab(tab2, tabName)                         #
+            self.tabs.addTab(customTab, tabName)
             self.tabs.setCurrentIndex(self.tabs.count()-1)          # setCurrentIndex로 보여주는 탭을 변경
             self.tabWidgets.append(tabName)                         # 리스트로 관리
 
