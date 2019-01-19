@@ -3,9 +3,11 @@ from PyQt5.QtWidgets import QApplication, QMainWindow, QWidget, QAction, \
     QTabWidget, QVBoxLayout, QPushButton, QFrame, QLabel, QLineEdit, QComboBox, QRadioButton, \
     QTableWidget, QHeaderView
 from PyQt5.QtCore import QRect
+from Layout.PayLayout import *
 
 class NMWindow(QMainWindow):
     def __init__(self):
+        self.tabWidgets = ["HOME"]
         super(NMWindow, self).__init__()
         self.setGeometry(100, 100, 1200, 700)
         self.setWindowTitle("RIRI NAIL SALON")
@@ -18,10 +20,8 @@ class NMWindow(QMainWindow):
 
         saleBar = menubar.addMenu("판매관리")
         payMenu = QAction("결제화면", self)
-        payMenu.triggered.connect(self.changeLayout)
+        payMenu.triggered.connect(lambda: self.tabManager(payMenu.text()))
         dailyClosingMenu = QAction("일마감현황", self)
-        paylayout = PayLayout()
-        dailyClosingMenu.triggered.connect(self.changeLayout)
 
         salesDetailsMenu = QAction("매출상세", self)
         productReceiptMenu = QAction("제품입고", self)
@@ -69,17 +69,19 @@ class NMWindow(QMainWindow):
         tabWidget = QWidget()
         tabWidget.layout = QVBoxLayout(tabWidget)
 
-        tabs = QTabWidget()
+        self.tabs = QTabWidget()
+        self.tabs.setTabsClosable(True)
         tab1 = QWidget()
-        tabs.resize(300, 200)
+        self.tabs.resize(300, 200)
 
-        tabs.addTab(tab1, "HOME")
+        self.tabs.addTab(tab1, "HOME")
+        self.tabs.tabBar().setTabButton(0, QTabBar.RightSide, None) # 첫 번째 탭은 닫기 버튼 제거
         tab1.layout = QVBoxLayout()
         pushButton = QPushButton("Test Btn")
         tab1.layout.addWidget(pushButton)
         tab1.setLayout(tab1.layout)
 
-        tabWidget.layout.addWidget(tabs)
+        tabWidget.layout.addWidget(self.tabs)
         tabWidget.setLayout(tabWidget.layout)
 
         self.setCentralWidget(tabWidget)
@@ -87,11 +89,20 @@ class NMWindow(QMainWindow):
         end QTabWidget
         '''
 
-
-    def changeLayout(self):
-        #changeButton = QPushButton("changed!!")
-        payLayout = PayLayout().mkLayout()
-        self.setCentralWidget(payLayout)
+    def tabManager(self, tabName): # 탭이 삭제되었을 때 Index 처리 ({} -> [])
+        if tabName in self.tabWidgets:
+            self.tabs.setCurrentIndex(self.tabWidgets.index(tabName))
+        else:
+            # tab2 = QWidget()
+            # tab2.layout = QVBoxLayout()
+            # QLineEdit(tab2)
+            # tab2.setLayout(tab2.layout)
+            #self.tabs.addTab(tab2, tabName)
+            if tabName == "결제화면":
+                newTab = PayLayoutTest()
+            self.tabs.addTab(newTab, tabName)
+            self.tabs.setCurrentIndex(self.tabs.count()-1)          # setCurrentIndex로 보여주는 탭을 변경
+            self.tabWidgets.append(tabName)                         # 리스트로 관리
 
 
 class PayLayout(QWidget):
@@ -243,6 +254,7 @@ class PayLayout(QWidget):
 
 
 if __name__ == "__main__":
+    QApplication.setStyle('Windows')
     app = QApplication(sys.argv)
     exe = NMWindow()
     exe.show()
