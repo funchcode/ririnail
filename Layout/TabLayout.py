@@ -73,7 +73,7 @@ class TabLayout(QMainWindow):
             # tab2.setLayout(tab2.layout)
             #self.tabs.addTab(tab2, tabName)
             if tabName == "결제화면":
-                newTab = PayLayoutTest()
+                newTab = PayLayout()
             self.tabs.addTab(newTab, tabName)
             self.tabs.setCurrentIndex(self.tabs.count()-1)          # setCurrentIndex로 보여주는 탭을 변경
             self.tabWidgets.append(tabName)                         # 리스트로 관리
