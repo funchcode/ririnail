@@ -56,9 +56,29 @@ class WorkClosed(QWidget):
             end 마감리스트
         '''
 
-if __name__ == "__main__":
-    QApplication.setStyle('Windows')
-    app = QApplication(sys.argv)
-    exe = WorkClosed()
-    exe.show()
-    sys.exit(app.exec_())
+        '''
+            총 합산(Dummy Data)
+        '''
+        totalWg = QFrame(self)
+        totalWg.setGeometry(800, 160, 350, 400)
+        totalWg.setStyleSheet("QWidget{background-color:#ffffff};")
+        totalLayout = QFormLayout(totalWg)
+        totalLayout.addRow("날짜:     ", QLabel("2019-01-01 ~ 2019-01-01"))
+        totalLayout.addRow("구분1:    ", QLabel("1,000,000,000"))
+        totalLayout.addRow("구분2:    ", QLabel("1,000,000,000"))
+        totalLayout.addRow("구분3:    ", QLabel("1,000,000,000"))
+        totalLayout.addRow("현금:     ", QLabel("1,000,000,000"))
+        totalLayout.addRow("카드:     ", QLabel("1,000,000,000"))
+        totalLayout.addRow("통장:     ", QLabel("1,000,000,000"))
+        totalLayout.addRow("외상:     ", QLabel("1,000,000,000"))
+        totalLayout.addRow("정액:     ", QLabel("1,000,000,000"))
+        '''
+            end 총 합산
+        '''
+
+# if __name__ == "__main__":
+#     QApplication.setStyle('Windows')
+#     app = QApplication(sys.argv)
+#     exe = WorkClosed()
+#     exe.show()
+#     sys.exit(app.exec_())

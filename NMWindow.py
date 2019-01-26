@@ -4,6 +4,8 @@ from PyQt5.QtWidgets import QApplication, QMainWindow, QWidget, QAction, \
     QTableWidget, QHeaderView
 from PyQt5.QtCore import QRect
 from Layout.PayLayout import *
+from Layout.ReservationLayout import *
+from Layout.WorkClosed import *
 
 class NMWindow(QMainWindow):
     def __init__(self):
@@ -22,6 +24,7 @@ class NMWindow(QMainWindow):
         payMenu = QAction("결제화면", self)
         payMenu.triggered.connect(lambda: self.tabManager(payMenu.text()))
         dailyClosingMenu = QAction("일마감현황", self)
+        dailyClosingMenu.triggered.connect(lambda: self.tabManager(dailyClosingMenu.text()))
 
         salesDetailsMenu = QAction("매출상세", self)
         productReceiptMenu = QAction("제품입고", self)
@@ -71,16 +74,11 @@ class NMWindow(QMainWindow):
 
         self.tabs = QTabWidget()
         self.tabs.setTabsClosable(True)
-        tab1 = QWidget()
+        home = ReservationLayout()
         self.tabs.resize(300, 200)
 
-        self.tabs.addTab(tab1, "HOME")
+        self.tabs.addTab(home, "HOME")
         self.tabs.tabBar().setTabButton(0, QTabBar.RightSide, None) # 첫 번째 탭은 닫기 버튼 제거
-        tab1.layout = QVBoxLayout()
-        pushButton = QPushButton("Test Btn")
-        tab1.layout.addWidget(pushButton)
-        tab1.setLayout(tab1.layout)
-
         tabWidget.layout.addWidget(self.tabs)
         tabWidget.setLayout(tabWidget.layout)
 
@@ -100,6 +98,8 @@ class NMWindow(QMainWindow):
             #self.tabs.addTab(tab2, tabName)
             if tabName == "결제화면":
                 newTab = PayLayout()
+            elif tabName == "일마감현황":
+                newTab = WorkClosed()
             self.tabs.addTab(newTab, tabName)
             self.tabs.setCurrentIndex(self.tabs.count()-1)          # setCurrentIndex로 보여주는 탭을 변경
             self.tabWidgets.append(tabName)                         # 리스트로 관리
